@@ -45,6 +45,18 @@ public class Main {
     // Add and map the generateValidHTML servlet
     tomcat.addServlet("", "generateValidHTML", new generateValidHTML());
     ctx.addServletMappingDecoded("/generateValidHTML", "generateValidHTML");
+    
+    // Add and map the GreetingServlet
+    tomcat.addServlet("", "GreetingServlet", new GreetingServlet());
+    ctx.addServletMappingDecoded("/GreetingServlet", "GreetingServlet");
+    
+    // Add and map the HtmlGenTest servlet
+    tomcat.addServlet("", "HtmlGenTest", new HtmlGenTest());
+    ctx.addServletMappingDecoded("/HtmlGenTest", "HtmlGenTest");
+    
+    // Add and map the DisplayMyName servlet
+    tomcat.addServlet("", "DisplayMyName", new DisplayMyName());
+    ctx.addServletMappingDecoded("/DisplayMyName", "DisplayMyName");
 
     // Start Tomcat
     try {

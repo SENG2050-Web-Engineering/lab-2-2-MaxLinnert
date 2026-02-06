@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Form</title>
+    <script src="/lab02/js/validate.js"></script>
+</head>
+<body>
+    <h1>Enter Your Name</h1>
+    <form action="DisplayMyName" method="GET" onsubmit="return validate();">
+        <label for="firstName"> First Name </label>
+        <input type="text" name="firstName" id="firstName"/> <br>
+        <label for="lastName"> Last Name </label>
+        <input type="text" name="lastName" id="lastName"/> <br>
+        <input type="reset" value="Clear"/>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
