@@ -37,6 +37,14 @@ public class Main {
     
     // Map the servlet
     ctx.addServletMappingDecoded("/HelloWorld", "HelloWorldServlet");
+    
+    // Add and map the servlet
+    tomcat.addServlet("", "SimpleMessage", new SimpleMessage());
+    ctx.addServletMappingDecoded("/SimpleMessage", "SimpleMessage");
+    
+    // Add and map the generateValidHTML servlet
+    tomcat.addServlet("", "generateValidHTML", new generateValidHTML());
+    ctx.addServletMappingDecoded("/generateValidHTML", "generateValidHTML");
 
     // Start Tomcat
     try {
